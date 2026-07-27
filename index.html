@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Al Amal Digital Agency — Full-Service Digital Marketing | Cairo & Dubai</title>
+<meta name="description" content="Al Amal Digital Agency: Award-winning SEO, Google Ads, Social Media, Branding & Web Development. Serving 28 countries from Cairo & Dubai.">
+<meta name="keywords" content="digital marketing agency, SEO, Google Ads, social media, branding, web development, Cairo, Dubai, MENA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="webgl-canvas"></canvas>
+<div class="grain"></div>
+<div class="site-content">
+
+<!-- CURSOR -->
+<div class="cursor-dot" id="cDot"></div>
+<div class="cursor-circle" id="cCircle"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="10" fill="url(#navLg)"/>
+        <path d="M10 28L20 10L30 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 22H26" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <defs>
+          <linearGradient id="navLg" x1="0" y1="0" x2="40" y2="40">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#7C3AED"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <span class="nav-wordmark">Al Amal Digital</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="nav-lang" id="langBtn">عربي</button>
+    <a href="contact.html" class="nav-cta">Free Consultation</a>
+    <button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-grid-lines"></div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow" id="eyebrow">
+      <div class="eyebrow-dot">⚡</div>
+      <span data-en="Cairo & Dubai — Serving 28 Countries" data-ar="القاهرة ودبي — نخدم 28 دولة">Cairo & Dubai — Serving 28 Countries</span>
+    </div>
+    <h1 class="hero-title" id="heroTitle">
+      <div class="line">
+        <span class="word" data-en="We Don't" data-ar="نحن لا">We Don't</span>
+      </div>
+      <div class="line">
+        <span class="word grad-text" data-en="Just Market." data-ar="نسوّق فقط.">Just Market.</span>
+      </div>
+      <div class="line">
+        <span class="word" data-en="We Grow" data-ar="نحن نُنمّي ">We Grow</span>
+      </div>
+      <div class="line">
+        <span class="word grad-text" data-en="Businesses." data-ar="الأعمال.">
+          Businesses.
+        </span>
+      </div>
+    </h1>
+    <p class="hero-sub" id="heroSub" data-en="Full-service digital marketing that drives measurable revenue. SEO, paid ads, social media, branding & web development — all under one roof." data-ar="تسويق رقمي متكامل يدفع النمو الحقيقي لعملك.">Full-service digital marketing that drives measurable revenue. SEO, paid ads, social media, branding & web development — all under one roof.</p>
+    <div class="hero-actions" id="heroActions">
+      <a href="contact.html" class="btn-glow"><span data-en="Get Free Strategy Call" data-ar="احجز مكالمة مجانية">Get Free Strategy Call</span></a>
+      <a href="portfolio.html" class="btn-outline"><span data-en="See Our Work" data-ar="شاهد أعمالنا">See Our Work</span> <span class="arrow-icon">→</span></a>
+    </div>
+    <div class="hero-metrics" id="heroMetrics">
+      <div>
+        <div class="h-metric-num">500+</div>
+        <div class="h-metric-label" data-en="Projects Delivered" data-ar="مشروع مُسلّم">Projects Delivered</div>
+      </div>
+      <div>
+        <div class="h-metric-num">$25M+</div>
+        <div class="h-metric-label" data-en="Client Revenue Generated" data-ar="عائد العميل">Client Revenue Generated</div>
+      </div>
+      <div>
+        <div class="h-metric-num">120+</div>
+        <div class="h-metric-label" data-en="Happy Clients" data-ar="عميل سعيد">Happy Clients</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-line">
+    <div class="scroll-line-bar"></div>
+    <div class="scroll-line-label">scroll</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">SEO Optimization</div>
+    <div class="marquee-item">Google Ads & PPC</div>
+    <div class="marquee-item">Social Media Marketing</div>
+    <div class="marquee-item">Brand Identity Design</div>
+    <div class="marquee-item">Web Development</div>
+    <div class="marquee-item">AI Automation</div>
+    <div class="marquee-item">Content Strategy</div>
+    <div class="marquee-item">E-Commerce Growth</div>
+    <div class="marquee-item">SEO Optimization</div>
+    <div class="marquee-item">Google Ads & PPC</div>
+    <div class="marquee-item">Social Media Marketing</div>
+    <div class="marquee-item">Brand Identity Design</div>
+    <div class="marquee-item">Web Development</div>
+    <div class="marquee-item">AI Automation</div>
+    <div class="marquee-item">Content Strategy</div>
+    <div class="marquee-item">E-Commerce Growth</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" style="background:transparent">
+  <div class="container">
+    <div class="s-label reveal"><div class="s-label-line"></div><span class="s-label-text">What We Do</span></div>
+    <h2 class="s-title reveal">Everything You Need to <span>Dominate Online</span></h2>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <span class="svc-num">01</span>
+        <span class="svc-icon">📈</span>
+        <div class="svc-title">SEO Optimization</div>
+        <p class="svc-desc">Page-one rankings for keywords that actually drive revenue. Technical SEO, content strategy, and authoritative link building.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">02</span>
+        <span class="svc-icon">🎯</span>
+        <div class="svc-title">Google Ads & PPC</div>
+        <p class="svc-desc">Precision-targeted campaigns with 4-6x ROAS. We manage every dollar of your ad spend for maximum return.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">03</span>
+        <span class="svc-icon">📱</span>
+        <div class="svc-title">Social Media Marketing</div>
+        <p class="svc-desc">Viral content strategy and community management that turns followers into paying customers across all platforms.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">04</span>
+        <span class="svc-icon">✨</span>
+        <div class="svc-title">Brand Identity</div>
+        <p class="svc-desc">Logos, visual identities, and brand systems that communicate trust and differentiation at every touchpoint.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">05</span>
+        <span class="svc-icon">💻</span>
+        <div class="svc-title">Web Development</div>
+        <p class="svc-desc">High-performance websites that convert. Built with Next.js, React, or any stack — always optimized for speed and UX.</p>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">06</span>
+        <span class="svc-icon">🤖</span>
+        <div class="svc-title">AI Automation</div>
+        <p class="svc-desc">Marketing automation that works 24/7. Lead nurturing, personalization, and campaign optimization powered by AI.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="services.html" class="btn-outline">Explore All Services <span class="arrow-icon">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" style="background:rgba(37,99,235,0.03);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 6%">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-cell reveal">
+        <div class="stat-icon">🚀</div>
+        <div class="stat-num" data-target="500" data-suf="+">500+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="stat-icon">💰</div>
+        <div class="stat-num" data-target="25" data-pre="$" data-suf="M+">$25M+</div>
+        <div class="stat-label">Client Revenue Generated</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="stat-icon">😊</div>
+        <div class="stat-num" data-target="120" data-suf="+">120+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="stat-icon">🌐</div>
+        <div class="stat-num" data-target="28" data-suf="">28</div>
+        <div class="stat-label">Countries Served</div>
+      </div>
+      <div class="stat-cell reveal">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-num" data-target="98" data-suf="%">98%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section style="background:transparent">
+  <div class="container">
+    <div class="why-wrap">
+      <div class="why-img-frame reveal-l">
+        <img class="why-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop" alt="Team at work" loading="lazy">
+        <div class="why-badge">
+          <div class="why-badge-num">10+ Years</div>
+          <div class="why-badge-label">of Digital Excellence</div>
+        </div>
+      </div>
+      <div class="reveal-r">
+        <div class="s-label"><div class="s-label-line"></div><span class="s-label-text">Why Choose Us</span></div>
+        <h2 class="s-title">We're Not Just an Agency. <span>We're Your Growth Partner.</span></h2>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-ico">📊</div>
+            <div>
+              <div class="why-title">100% Data-Driven Strategy</div>
+              <div class="why-desc">No guesswork. Every decision is backed by rigorous research, competitive analysis, and real-time analytics.</div>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-ico">🎯</div>
+            <div>
+              <div class="why-title">Results-Guaranteed Approach</div>
+              <div class="why-desc">We set clear KPIs upfront and are accountable to them. If we don't deliver, we work for free until we do.</div>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-ico">🔬</div>
+            <div>
+              <div class="why-title">Senior-Level Expertise</div>
+              <div class="why-desc">No junior handoffs. Your account is managed by senior specialists with 8+ years of hands-on experience.</div>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-ico">⚡</div>
+            <div>
+              <div class="why-title">AI-Powered Execution</div>
+              <div class="why-desc">We leverage cutting-edge AI tools to deliver faster results, sharper targeting, and continuous optimization.</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:36px">
+          <a href="about.html" class="btn-outline">Meet the Team <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO PREVIEW -->
+<section style="background:rgba(0,0,0,0.2);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="s-label center reveal"><div class="s-label-line"></div><span class="s-label-text">Our Work</span></div>
+    <h2 class="s-title center reveal">Results That <span>Speak for Themselves</span></h2>
+    <div class="portfolio-grid" style="margin-top:64px">
+      <div class="p-card reveal" data-cat="ecom">
+        <div class="p-img">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80&auto=format&fit=crop" alt="E-commerce" loading="lazy">
+          <div class="p-overlay"></div>
+          <div class="p-overlay-btn"><button class="p-view-btn">View Case Study</button></div>
+        </div>
+        <div class="p-info">
+          <div class="p-cat">E-Commerce</div>
+          <div class="p-name">Fashion Store: 0 → $400K/mo</div>
+          <div class="p-tags"><span class="ptag">Meta Ads</span><span class="ptag">SEO</span><span class="ptag">+400% Revenue</span></div>
+        </div>
+      </div>
+      <div class="p-card reveal" data-cat="seo">
+        <div class="p-img">
+          <img src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=700&q=80&auto=format&fit=crop" alt="SEO" loading="lazy">
+          <div class="p-overlay"></div>
+          <div class="p-overlay-btn"><button class="p-view-btn">View Case Study</button></div>
+        </div>
+        <div class="p-info">
+          <div class="p-cat">SEO</div>
+          <div class="p-name">SaaS: Page 4 to #1 Rankings</div>
+          <div class="p-tags"><span class="ptag">Technical SEO</span><span class="ptag">Links</span><span class="ptag">+287% Traffic</span></div>
+        </div>
+      </div>
+      <div class="p-card reveal" data-cat="brand">
+        <div class="p-img">
+          <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=700&q=80&auto=format&fit=crop" alt="Branding" loading="lazy">
+          <div class="p-overlay"></div>
+          <div class="p-overlay-btn"><button class="p-view-btn">View Case Study</button></div>
+        </div>
+        <div class="p-info">
+          <div class="p-cat">Branding</div>
+          <div class="p-name">Fintech Rebrand → $5M Series A</div>
+          <div class="p-tags"><span class="ptag">Logo</span><span class="ptag">Brand System</span><span class="ptag">Series A</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="portfolio.html" class="btn-outline">View Full Portfolio <span class="arrow-icon">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:transparent">
+  <div class="container">
+    <div class="s-label center reveal"><div class="s-label-line"></div><span class="s-label-text">Client Stories</span></div>
+    <h2 class="s-title center reveal">What Our <span>Clients Say</span></h2>
+    <div class="t-wrap">
+      <div class="t-track" id="tTrack">
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">“Al Amal Digital transformed our online presence. We went from invisible to ranking #1 for our top 10 keywords within 5 months. The ROI has been extraordinary.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&crop=face" alt="">
+            <div><div class="t-name">Tariq Al-Mansouri</div><div class="t-role">CEO, TechVentures MENA</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">“Our Google Ads ROAS jumped from 1.8x to 5.4x in just 3 months. The team’s analytical approach and constant optimization is unlike any agency we’ve worked with.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&auto=format&fit=crop&crop=face" alt="">
+            <div><div class="t-name">Rania Khalil</div><div class="t-role">Marketing Director, StyleHub</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">“The brand identity they created for us was instrumental in closing our Series A. Investors literally commented on how professional and trustworthy our brand looked.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&auto=format&fit=crop&crop=face" alt="">
+            <div><div class="t-name">Youssef Nabil</div><div class="t-role">Founder, FinPulse</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">“We 5x’d our social media following in 60 days and our monthly revenue doubled. The content strategy was brilliant. Highly recommend to any brand serious about growth.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&auto=format&fit=crop&crop=face" alt="">
+            <div><div class="t-name">Noura Al-Rashid</div><div class="t-role">Owner, Bloom Beauty</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">“Al Amal built our entire e-commerce presence from scratch. Website, SEO, ads, social — everything. First month: $120K revenue. We couldn’t be happier.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80&auto=format&fit=crop&crop=face" alt="">
+            <div><div class="t-name">Omar Farid</div><div class="t-role">Co-Founder, ShopMena</div></div>
+          </div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p class="t-text">“The AI automation system they built for our lead nurturing cut our cost per lead by 65%. We now have more qualified leads than our sales team can handle.”</p>
+          <div class="t-author">
+            <img class="t-avatar" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80&auto=format&fit=crop&crop=face" alt="">
+            <div><div class="t-name">Hana Al-Sayed</div><div class="t-role">VP Marketing, CloudBase</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="t-controls">
+      <button class="t-btn" id="tPrev">←</button>
+      <div class="t-dots" id="tDots">
+        <div class="tdot on" onclick="goT(0)"></div>
+        <div class="tdot" onclick="goT(1)"></div>
+      </div>
+      <button class="t-btn" id="tNext">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG PREVIEW -->
+<section style="background:rgba(0,0,0,0.2);border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="s-label center reveal"><div class="s-label-line"></div><span class="s-label-text">Insights</span></div>
+    <h2 class="s-title center reveal">Latest from <span>Our Blog</span></h2>
+    <div class="blog-grid" style="margin-top:64px">
+      <div class="b-card reveal">
+        <a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80&auto=format&fit=crop" alt="AI" loading="lazy"></a>
+        <div class="b-body">
+          <div class="b-cat">AI Marketing</div>
+          <a href="blog-post.html"><h3 class="b-title">The Complete Guide to AI-Powered Marketing in 2026</h3></a>
+          <p class="b-excerpt">AI is reshaping every channel. Here’s what you need to know to stay ahead in 2026.</p>
+          <div class="b-meta"><span class="b-date">Feb 3, 2026</span><span class="b-read">⏱ 12 min</span></div>
+        </div>
+      </div>
+      <div class="b-card reveal">
+        <a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=600&q=80&auto=format&fit=crop" alt="SEO" loading="lazy"></a>
+        <div class="b-body">
+          <div class="b-cat">SEO</div>
+          <a href="blog-post.html"><h3 class="b-title">10 SEO Strategies That Actually Work in 2026</h3></a>
+          <p class="b-excerpt">Google’s algorithm has evolved dramatically. Here are the tactics that move the needle.</p>
+          <div class="b-meta"><span class="b-date">Jan 28, 2026</span><span class="b-read">⏱ 8 min</span></div>
+        </div>
+      </div>
+      <div class="b-card reveal">
+        <a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="PPC" loading="lazy"></a>
+        <div class="b-body">
+          <div class="b-cat">Paid Ads</div>
+          <a href="blog-post.html"><h3 class="b-title">How to Achieve 5x ROAS With Google Ads in 2026</h3></a>
+          <p class="b-excerpt">Stop wasting your ad budget. Here’s the exact framework we use for clients.</p>
+          <div class="b-meta"><span class="b-date">Jan 20, 2026</span><span class="b-read">⏱ 7 min</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="blog.html" class="btn-outline">Read All Articles <span class="arrow-icon">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section reveal">
+  <h2 data-en="Ready to <span>Scale?</span>" data-ar="مستعد لل<span>نمو؟</span>">Ready to <span>Scale?</span></h2>
+  <p data-en="Book a free 30-minute strategy consultation. We'll audit your digital presence and show you exactly how to grow." data-ar="احجز استشارة مجانية لمدة 30 دقيقة.">Book a free 30-minute strategy consultation. We'll audit your digital presence and show you exactly how to grow.</p>
+  <div class="cta-btns">
+    <a href="contact.html" class="btn-glow"><span>Book Free Consultation</span></a>
+    <a href="pricing.html" class="btn-outline">View Pricing <span class="arrow-icon">→</span></a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="f-logo">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 40 40" fill="none">
+            <rect width="40" height="40" rx="10" fill="url(#ftLg)"/>
+            <path d="M10 28L20 10L30 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 22H26" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <defs>
+              <linearGradient id="ftLg" x1="0" y1="0" x2="40" y2="40">
+                <stop offset="0%" stop-color="#2563EB"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="nav-wordmark">Al Amal Digital</span>
+      </a>
+      <p class="f-desc">Full-service digital marketing agency based in Cairo & Dubai, serving ambitious businesses across 28 countries.</p>
+      <div class="f-socials">
+        <a class="f-soc" href="#">in</a>
+        <a class="f-soc" href="#">𝕏</a>
+        <a class="f-soc" href="#">f</a>
+        <a class="f-soc" href="#">▶</a>
+      </div>
+    </div>
+    <div>
+      <div class="f-heading">Services</div>
+      <ul class="f-links">
+        <li><a href="services.html">SEO Optimization</a></li>
+        <li><a href="services.html">Google Ads & PPC</a></li>
+        <li><a href="services.html">Social Media</a></li>
+        <li><a href="services.html">Brand Identity</a></li>
+        <li><a href="services.html">Web Development</a></li>
+        <li><a href="services.html">AI Automation</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-heading">Company</div>
+      <ul class="f-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-heading">Resources</div>
+      <ul class="f-links">
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Free Audit</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+      <div style="margin-top:28px;padding:20px;background:rgba(37,99,235,0.06);border:1px solid rgba(37,99,235,0.15);border-radius:var(--r)">
+        <div style="font-size:12px;color:var(--t3);margin-bottom:8px">📍 Cairo Office</div>
+        <div style="font-size:13px;color:var(--t2)">Maadi Business Park, Cairo, Egypt</div>
+        <div style="font-size:12px;color:var(--t3);margin:12px 0 4px">🏢 Dubai Office</div>
+        <div style="font-size:13px;color:var(--t2)">Business Bay, Dubai, UAE</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="f-copy">© 2026 Al Amal Digital Agency. All rights reserved.</span>
+    <span class="f-made">Crafted with <span>♥</span> by Al Amal Team</span>
+  </div>
+</footer>
+
+<a href="contact.html" class="fab">💬</a>
+
+</div><!-- end site-content -->
+<script src="assets/main.js"></script>
+</body>
+</html>
