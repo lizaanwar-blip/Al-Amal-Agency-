@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact — Al Amal Digital Agency</title>
+<meta name="description" content="Get in touch with Al Amal Digital Agency for a free consultation. Cairo & Dubai offices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="webgl-canvas"></canvas><div class="grain"></div>
+<div class="site-content">
+<div class="cursor-dot" id="cDot"></div><div class="cursor-circle" id="cCircle"></div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#lg)"/><path d="M10 28L20 10L30 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22H26" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs></svg></div><span class="nav-wordmark">Al Amal Digital</span></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="active">Contact</a></li></ul>
+  <div class="nav-right"><button class="nav-lang" id="langBtn">عربي</button><a href="contact.html" class="nav-cta">Free Consultation</a><button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-glow"></div>
+  <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Contact</span></div>
+  <div class="page-hero-label"><div class="phl-line"></div><span class="phl-text">Let's Talk</span></div>
+  <h1>Start Your <span>Growth Journey</span></h1>
+  <p>Book a free 30-minute strategy consultation. No pressure, no sales pitch — just honest advice for your business.</p>
+</div>
+
+<section style="padding:80px 6%;background:transparent">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="reveal-l">
+        <div class="s-label"><div class="s-label-line"></div><span class="s-label-text">Get In Touch</span></div>
+        <h2 class="s-title">We'd Love to <span>Hear From You</span></h2>
+        <p style="font-size:16px;color:var(--t2);line-height:1.75;margin-top:12px">Whether you have a specific project in mind or just want to explore how we can help your business grow — we're always happy to chat.</p>
+        <div class="c-items">
+          <div class="c-item"><div class="c-ico">📍</div><div><div class="c-label">Cairo Office</div><div class="c-val">Maadi Business Park, Cairo, Egypt</div></div></div>
+          <div class="c-item"><div class="c-ico">🏢</div><div><div class="c-label">Dubai Office</div><div class="c-val">Business Bay, Dubai, UAE</div></div></div>
+          <div class="c-item"><div class="c-ico">📧</div><div><div class="c-label">Email</div><div class="c-val">hello@alamaldigital.com</div></div></div>
+          <div class="c-item"><div class="c-ico">📞</div><div><div class="c-label">Phone</div><div class="c-val">+20 (2) 2700 8888</div></div></div>
+          <div class="c-item"><div class="c-ico">⏰</div><div><div class="c-label">Working Hours</div><div class="c-val">Sun–Thu: 9AM – 6PM (Cairo Time)</div></div></div>
+        </div>
+        <div class="map-frame"><div class="map-grid"></div><div class="map-placeholder"><div class="map-pin">📍</div><p style="font-weight:700;color:var(--t2)">Maadi Business Park<br>Cairo, Egypt</p></div></div>
+      </div>
+      <div class="reveal-r">
+        <div class="cf">
+          <div class="cf-title">Send Us a Message</div>
+          <div class="cf-sub">We respond within 24 hours on business days.</div>
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row"><div class="form-g"><label>First Name</label><input type="text" placeholder="Khalid" required></div><div class="form-g"><label>Last Name</label><input type="text" placeholder="Al-Rashid" required></div></div>
+            <div class="form-row"><div class="form-g"><label>Email</label><input type="email" placeholder="hello@company.com" required></div><div class="form-g"><label>Phone</label><input type="tel" placeholder="+20 100 0000 000"></div></div>
+            <div class="form-g"><label>Company</label><input type="text" placeholder="Your Company Name"></div>
+            <div class="form-g"><label>Service Interested In</label><select style="background:rgba(255,255,255,0.03);color:#fff"><option value="" style="background:#0a0a1a">Select a service...</option><option style="background:#0a0a1a">SEO Optimization</option><option style="background:#0a0a1a">Google Ads & PPC</option><option style="background:#0a0a1a">Social Media Marketing</option><option style="background:#0a0a1a">Brand Identity</option><option style="background:#0a0a1a">Web Development</option><option style="background:#0a0a1a">AI Automation</option><option style="background:#0a0a1a">Full-Service Package</option></select></div>
+            <div class="form-g"><label>Budget Range</label><select style="background:rgba(255,255,255,0.03);color:#fff"><option value="" style="background:#0a0a1a">Select budget...</option><option style="background:#0a0a1a">Under $1,000/mo</option><option style="background:#0a0a1a">$1,000 – $2,500/mo</option><option style="background:#0a0a1a">$2,500 – $5,000/mo</option><option style="background:#0a0a1a">$5,000+/mo</option></select></div>
+            <div class="form-g"><label>Tell Us About Your Project</label><textarea placeholder="Describe your goals and challenges..."></textarea></div>
+            <button type="submit" class="form-submit">Send Message →</button>
+          </form>
+          <div id="formSuccess" style="display:none;text-align:center;padding:32px"><div style="font-size:48px;margin-bottom:12px">✅</div><h3 style="font-size:20px;font-weight:800;margin-bottom:8px">Message Sent!</h3><p style="color:var(--t2);font-size:14px">We'll be in touch within 24 hours.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:60px 6%;background:rgba(37,99,235,0.03);border-top:1px solid var(--border)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+      <div style="text-align:center;padding:32px 20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)" class="reveal"><div style="font-size:32px;margin-bottom:12px">⚡</div><div style="font-size:15px;font-weight:700;margin-bottom:6px">24h Response</div><div style="font-size:13px;color:var(--t3)">We reply to every inquiry within 24 business hours</div></div>
+      <div style="text-align:center;padding:32px 20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)" class="reveal"><div style="font-size:32px;margin-bottom:12px">🆓</div><div style="font-size:15px;font-weight:700;margin-bottom:6px">Free Audit</div><div style="font-size:13px;color:var(--t3)">Every consultation includes a free website & SEO audit</div></div>
+      <div style="text-align:center;padding:32px 20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)" class="reveal"><div style="font-size:32px;margin-bottom:12px">🔒</div><div style="font-size:15px;font-weight:700;margin-bottom:6px">No Lock-In</div><div style="font-size:13px;color:var(--t3)">Month-to-month contracts. Cancel anytime with 30 days notice</div></div>
+      <div style="text-align:center;padding:32px 20px;background:var(--card);border:1px solid var(--border);border-radius:var(--r)" class="reveal"><div style="font-size:32px;margin-bottom:12px">🏆</div><div style="font-size:15px;font-weight:700;margin-bottom:6px">Proven Results</div><div style="font-size:13px;color:var(--t3)">500+ projects delivered. 98% client satisfaction rate</div></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="footer-grid"><div><a href="index.html" class="f-logo"><div class="nav-logo-mark"><svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#lg2)"/><path d="M10 28L20 10L30 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22H26" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs></svg></div><span class="nav-wordmark">Al Amal Digital</span></a><p class="f-desc">Full-service digital marketing. Cairo & Dubai. Serving 28 countries.</p><div class="f-socials"><a class="f-soc" href="#">in</a><a class="f-soc" href="#">𝕏</a><a class="f-soc" href="#">f</a></div></div><div><div class="f-heading">Services</div><ul class="f-links"><li><a href="services.html">SEO</a></li><li><a href="services.html">Google Ads</a></li><li><a href="services.html">Branding</a></li><li><a href="services.html">Web Dev</a></li></ul></div><div><div class="f-heading">Company</div><ul class="f-links"><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><div class="f-heading">Resources</div><ul class="f-links"><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Free Audit</a></li><li><a href="#">Privacy</a></li></ul></div></div><div class="footer-bottom"><span class="f-copy">© 2026 Al Amal Digital Agency.</span><span class="f-made">Crafted with <span>♥</span> by Al Amal Team</span></div></footer>
+</div>
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.7';
+  setTimeout(() => {
+    form.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }, 1500);
+}
+</script>
+<script src="assets/main.js"></script>
+</body></html>
