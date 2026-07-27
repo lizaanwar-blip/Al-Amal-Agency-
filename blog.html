@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Blog — Al Amal Digital Agency</title>
+<meta name="description" content="Digital marketing insights, SEO strategies, and growth tactics from the Al Amal Digital team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<canvas id="webgl-canvas"></canvas><div class="grain"></div>
+<div class="site-content">
+<div class="cursor-dot" id="cDot"></div><div class="cursor-circle" id="cCircle"></div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#lg)"/><path d="M10 28L20 10L30 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22H26" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs></svg></div><span class="nav-wordmark">Al Amal Digital</span></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="about.html">About</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav-right"><button class="nav-lang" id="langBtn">عربي</button><a href="contact.html" class="nav-cta">Free Consultation</a><button class="hamburger" id="menuBtn"><span></span><span></span><span></span></button></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-glow"></div>
+  <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Blog</span></div>
+  <div class="page-hero-label"><div class="phl-line"></div><span class="phl-text">Insights & Strategy</span></div>
+  <h1>Digital Marketing <span>Intelligence</span></h1>
+  <p>Tactical insights, data-backed strategies, and expert analysis from our team of digital marketing specialists.</p>
+</div>
+
+<section style="padding:80px 6%">
+  <div class="container">
+    <a href="blog-post.html" class="b-featured reveal">
+      <div class="b-feat-img"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80&auto=format&fit=crop" alt="AI Marketing" loading="lazy"></div>
+      <div class="b-feat-body">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="chip">AI Marketing</span><span class="chip" style="background:rgba(6,182,212,0.1);border-color:rgba(6,182,212,0.2);color:var(--s)">Featured</span></div>
+        <h2 class="b-feat-title">The Complete Guide to AI-Powered Marketing in 2026</h2>
+        <p class="b-feat-desc">AI is reshaping every channel of digital marketing. From predictive analytics to hyper-personalized campaigns — here's everything you need to know to stay ahead.</p>
+        <div class="b-feat-meta"><div class="b-feat-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&q=80&auto=format&fit=crop&crop=face" alt=""><span>Khalid Al-Amal</span></div><span class="b-feat-date">Feb 3, 2026</span><span class="b-feat-read">⏱ 12 min read</span></div>
+        <span class="btn-outline" style="display:inline-flex;margin-top:20px;padding:10px 24px;font-size:13px">Read Full Article <span class="arrow-icon">→</span></span>
+      </div>
+    </a>
+
+    <div style="margin-top:80px">
+      <div class="s-label reveal"><div class="s-label-line"></div><span class="s-label-text">Latest Articles</span></div>
+      <div class="blog-grid" style="margin-top:40px">
+        <div class="b-card reveal"><a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?w=600&q=80&auto=format&fit=crop" alt="SEO" loading="lazy"></a><div class="b-body"><div class="b-cat">SEO</div><a href="blog-post.html"><h3 class="b-title">10 SEO Strategies That Actually Work in 2026</h3></a><p class="b-excerpt">Google's algorithm has evolved dramatically. Here are the tactics our team uses to rank clients on page 1.</p><div class="b-meta"><span class="b-date">Jan 28, 2026</span><span class="b-read">⏱ 8 min</span></div></div></div>
+        <div class="b-card reveal"><a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80&auto=format&fit=crop" alt="PPC" loading="lazy"></a><div class="b-body"><div class="b-cat">Paid Ads</div><a href="blog-post.html"><h3 class="b-title">How to Achieve 5x ROAS With Google Ads in 2026</h3></a><p class="b-excerpt">Most advertisers waste 60% of their ad budget. Here's how to fix your campaigns and drive real profit.</p><div class="b-meta"><span class="b-date">Jan 20, 2026</span><span class="b-read">⏱ 7 min</span></div></div></div>
+        <div class="b-card reveal"><a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format&fit=crop" alt="Social" loading="lazy"></a><div class="b-body"><div class="b-cat">Social Media</div><a href="blog-post.html"><h3 class="b-title">TikTok vs Instagram in 2026: Where Should Brands Invest?</h3></a><p class="b-excerpt">The social media landscape has shifted. Data from 50+ campaigns reveals where your budget goes further.</p><div class="b-meta"><span class="b-date">Jan 15, 2026</span><span class="b-read">⏱ 6 min</span></div></div></div>
+        <div class="b-card reveal"><a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80&auto=format&fit=crop" alt="Branding" loading="lazy"></a><div class="b-body"><div class="b-cat">Branding</div><a href="blog-post.html"><h3 class="b-title">Why Your Brand Identity Is Costing You Customers</h3></a><p class="b-excerpt">A weak visual identity creates instant distrust. Here's how to audit and fix your brand perception.</p><div class="b-meta"><span class="b-date">Jan 10, 2026</span><span class="b-read">⏱ 5 min</span></div></div></div>
+        <div class="b-card reveal"><a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop" alt="Analytics" loading="lazy"></a><div class="b-body"><div class="b-cat">Analytics</div><a href="blog-post.html"><h3 class="b-title">The 7 Marketing Metrics That Actually Matter in 2026</h3></a><p class="b-excerpt">Stop tracking vanity metrics. These are the numbers that predict business growth with 90% accuracy.</p><div class="b-meta"><span class="b-date">Jan 5, 2026</span><span class="b-read">⏱ 9 min</span></div></div></div>
+        <div class="b-card reveal"><a href="blog-post.html"><img class="b-img" src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80&auto=format&fit=crop" alt="Lead Gen" loading="lazy"></a><div class="b-body"><div class="b-cat">Lead Generation</div><a href="blog-post.html"><h3 class="b-title">How We Generated 850 Leads/Month for a Real Estate Client</h3></a><p class="b-excerpt">A full breakdown of the SEO + PPC strategy that delivered $12 CPL for a UAE property developer.</p><div class="b-meta"><span class="b-date">Dec 28, 2025</span><span class="b-read">⏱ 10 min</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:rgba(37,99,235,0.04);border-top:1px solid var(--border);padding:80px 6%">
+  <div class="container" style="max-width:600px;text-align:center">
+    <div class="s-label center reveal"><div class="s-label-line"></div><span class="s-label-text">Newsletter</span></div>
+    <h2 class="s-title reveal">Get Weekly <span>Marketing Intelligence</span></h2>
+    <p style="color:var(--t2);margin:16px 0 32px;font-size:15px" class="reveal">Join 3,200+ marketers who get our weekly digest of strategies, case studies, and industry insights.</p>
+    <form style="display:flex;gap:12px;justify-content:center" class="reveal" onsubmit="return false">
+      <input type="email" placeholder="your@email.com" style="flex:1;max-width:320px;height:52px;padding:0 20px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:100px;color:#fff;font-family:inherit;font-size:14px">
+      <button type="submit" class="btn-glow" style="height:52px;padding:0 28px;flex-shrink:0"><span>Subscribe</span></button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="footer-grid"><div><a href="index.html" class="f-logo"><div class="nav-logo-mark"><svg viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#lg2)"/><path d="M10 28L20 10L30 28" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 22H26" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/><defs><linearGradient id="lg2" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#2563EB"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient></defs></svg></div><span class="nav-wordmark">Al Amal Digital</span></a><p class="f-desc">Expert digital marketing insights for ambitious businesses.</p><div class="f-socials"><a class="f-soc" href="#">in</a><a class="f-soc" href="#">𝕏</a><a class="f-soc" href="#">f</a></div></div><div><div class="f-heading">Company</div><ul class="f-links"><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="blog.html">Blog</a></li></ul></div></div><div class="footer-bottom"><span class="f-copy">© 2026 Al Amal Digital Agency.</span><span class="f-made">Crafted with <span>♥</span> by Al Amal Team</span></div></footer>
+<a href="contact.html" class="fab">💬</a>
+</div>
+<script src="assets/main.js"></script>
+</body></html>
